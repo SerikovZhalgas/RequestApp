@@ -1,10 +1,15 @@
 import React from 'react';
-import './App.module.css';
+import '../Assets/scss/App.scss';
+import {RouteComponent} from "../Components/Route/RouteComponent";
+import {NavBar} from "../Components/NavBar/NavBar";
 
 export const App = () => {
-  return (
-    <div>
-
-    </div>
-  );
+    return (
+        <>
+            <NavBar/>
+            <main className='main_container'>
+                <RouteComponent/>
+            </main>
+        </>
+    );
 };

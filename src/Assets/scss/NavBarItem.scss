@@ -1,0 +1,22 @@
+@import "../variables";
+
+.navbar-item__container {
+  list-style-type: $none;
+
+  .navbar-item {
+
+    .navbar-item__name {
+      margin: 0;
+    }
+  }
+
+  .navbar-item__active--style {
+    text-decoration: $none;
+    @include defaultStyle($colorBlue, $none, $fw-400, $fs-20, $lh-120);
+  }
+
+  .navbar-item--style {
+    text-decoration: $none;
+    @include defaultStyle(black, $none, $fw-400, $fs-20, $lh-120);
+  }
+}

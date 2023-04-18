@@ -1,0 +1,7 @@
+@import "../variables";
+
+.main_container{
+  @include widthBoxSizing();
+  height: 100vh;
+  @include displayFlex($none, $none, center, center);
+}

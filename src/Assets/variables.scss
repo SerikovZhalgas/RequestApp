@@ -1,0 +1,59 @@
+$colorBlue: #17ABEB;
+$colorGrey: #888888;
+$colorGreyDisable: #CACACA;
+$colorError: #FF3F25;
+$colorValid: #5BD222;
+
+$font-family-main: 'Inter', sans-serif;
+
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+
+$fs-12: 12px;
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-18: 18px;
+$fs-20: 20px;
+$fs-24: 24px;
+$fs-48: 48px;
+
+$lh-110: 110%;
+$lh-120: 120%;
+
+$none: none;
+
+@mixin widthBoxSizing(){
+  width: 100%;
+  box-sizing: border-box;
+};
+
+@mixin defaultStyle($color, $bgColor, $fw, $fs, $lh) {
+  color: $color;
+  @if $bgColor != $none {
+    background-color: $bgColor;
+  }
+
+  font-family: $font-family-main;
+  font-style: normal;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+};
+
+@mixin displayFlex($direct, $wrap, $jc, $ai) {
+  display: flex;
+  @if $direct != $none {
+    flex-direction: $direct;
+  }
+  @if $wrap != $none {
+    flex-wrap: $wrap;
+  }
+  @if $jc != $none {
+    justify-content: $jc;
+  }
+  @if $ai != $none {
+    align-items: $ai;
+  }
+};

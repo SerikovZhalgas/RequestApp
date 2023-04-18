@@ -1,0 +1,23 @@
+@import "../variables";
+
+.navbar__container {
+  @include widthBoxSizing();
+  position: absolute;
+  top: 0;
+  padding: 16px 0;
+  @include displayFlex($none, $none, center, center);
+
+  .navbar__nav__container {
+    .navbar__ul__container {
+      margin: 0;
+      padding: 0;
+
+      @include displayFlex($none, $none, center, center);
+      gap: 32px;
+    }
+  }
+}
+
+.navbar--style {
+  border-bottom: 1px solid $colorGreyDisable;
+}
