@@ -3,14 +3,20 @@ const ACTION_TYPES = {
 }
 
 const initialState = {
-    requests: [] as requestsType[]
+    requests: [
+        {id: 1, name: 'Константин', phoneNumber: '+7 747 133 72 81', email: 'abzhanow@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 0,1)).toDateString())},
+        {id: 2, name: 'Нариман', phoneNumber: '+7 747 133 72 81', email: 'abzhanovnariman1998@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 1,1)).toDateString())},
+        {id: 3, name: 'Юлия', phoneNumber: '+7 747 133 72 81', email: 'abzhanow@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 2,1)).toDateString())},
+        {id: 4, name: 'Нурсултан', phoneNumber: '+7 747 133 72 81', email: 'abzhanovnariman1998@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 3,1)).toDateString())},
+        {id: 5, name: 'Константин', phoneNumber: '+7 747 133 72 81', email: 'abzhanow@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 3,10)).toDateString())},
+    ] as requestsType[]
 };
 
 export const requestsListReducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
         case ACTION_TYPES.SET_REQUEST_VALUES:
             const newId = state.requests.length + 1;
-            const createdDate = new Date();
+            const createdDate = Date.now();
             return {...state,
                 requests: [...state.requests, {
                     id: newId,
@@ -38,11 +44,11 @@ export const setRequestValuesAC = (name: string, phoneNumber: string, email: str
 
 // types
 type InitialStateType = typeof initialState;
-type requestsType = {
+export type requestsType = {
     id: number
     name: string
     phoneNumber: string
     email: string
-    createdDate: Date
+    createdDate: string | number
 };
 type ActionsType = ReturnType<typeof setRequestValuesAC>;

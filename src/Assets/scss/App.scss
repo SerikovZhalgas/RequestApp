@@ -1,7 +1,14 @@
 @import "../variables";
 
-.main_container{
+.main__request-form-container {
   @include widthBoxSizing();
   height: 100vh;
   @include displayFlex($none, $none, center, center);
+}
+
+.main__requests-list-container {
+  @include widthBoxSizing();
+  height: 100vh;
+  padding-top: 90px;
+  @include displayFlex($none, $none, center, flex-start);
 }

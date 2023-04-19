@@ -1,0 +1,33 @@
+@import "../variables";
+
+.success-page__container {
+  @include displayFlex(column, $none, center, center);
+
+  .success-page__sent-text {
+    margin: 0 0 16px;
+  }
+
+  .success-page__sent-text--style {
+    @include defaultStyle($colorValid, $none, $fw-600, $fs-48, $lh-110);
+  }
+
+  .success-page__contact-text {
+    margin: 0 0 24px;
+  }
+
+  .success-page__contact-text--style {
+    @include defaultStyle(black, $none, $fw-400, $fs-20, $lh-140);
+  }
+
+  .success-page__restart-btn {
+    box-sizing: border-box;
+    min-width: 360px;
+    padding: 16px 0;
+  }
+
+  .success-page__restart-btn--style {
+    @include defaultStyle(white, $colorBlue, $fw-500, $fs-18, $lh-120);
+    border: none;
+    border-radius: 15px;
+  }
+}

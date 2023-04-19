@@ -1,0 +1,17 @@
+@import "../variables";
+
+.request-list__container {
+  @include displayFlex(column, $none, flex-start, flex-start);
+
+  .request-list__all-requests-text {
+    margin: 0 0 8px;
+  }
+
+  .request-list__all-requests-text--style {
+    @include defaultStyle(black, $none, $fw-600, $fs-48, $lh-110);
+  }
+
+  .request-list__table {
+    @include widthBoxSizing();
+  }
+}

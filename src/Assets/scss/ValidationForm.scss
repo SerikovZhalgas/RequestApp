@@ -1,0 +1,180 @@
+@import "../variables";
+
+.form__form {
+  box-sizing: border-box;
+  max-width: 360px;
+  @include displayFlex(column, $none, center, center);
+
+  .form__inputs {
+    @include widthBoxSizing();
+    @include displayFlex(column, $none, center, center);
+    margin-bottom: 24px;
+    gap: 16px;
+
+    .form__input {
+      @include widthBoxSizing();
+      padding: 15px 24px 17px;
+
+      &:focus::placeholder {
+        color: transparent;
+      }
+    }
+
+    .form__input-valid--style {
+      border: 1px solid $colorValid;
+      border-radius: 15px;
+
+      @include defaultStyle(black, $none, $fw-400, $fs-18, $lh-120);
+
+      &::placeholder {
+        color: $colorValid;
+      }
+    }
+
+    .form__input-error-style {
+      border: 1px solid $colorError;
+      border-radius: 15px;
+
+      @include defaultStyle($colorError, $none, $fw-400, $fs-18, $lh-120);
+
+      &::placeholder {
+        color: $colorError;
+      }
+    }
+
+    .form__input-phone-error-style {
+      position: relative;
+      border: 1px solid $colorError;
+      border-radius: 15px;
+
+      @include defaultStyle($colorError, $none, $fw-400, $fs-18, $lh-120);
+
+      &::placeholder {
+        color: $colorError;
+      }
+
+      &:after {
+        content: '!';
+        position: absolute;
+        right: 0;
+        z-index: 999;
+        @include defaultStyle($colorError, $none, $fw-400, $fs-18, $lh-120);
+      }
+    }
+
+    .form__input--style {
+      border: 1px solid $colorGreyDisable;
+      border-radius: 15px;
+
+      @include defaultStyle(black, $none, $fw-400, $fs-18, $lh-120);
+    }
+
+    .form__tabs {
+      @include widthBoxSizing();
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      * {
+        z-index: 2;
+      }
+
+      .form__tab-label {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.15s ease-in;
+      }
+
+      .form__tab-label--style {
+        @include defaultStyle($colorGrey, $none, $fw-400, $fs-18, $lh-120);
+        border-radius: 15px;
+        cursor: pointer;
+
+        &:hover {
+          color: $colorBlue;
+        }
+      }
+
+      .form__tab-input {
+        display: none;
+
+        &:checked {
+          & + label {
+            color: $colorBlue;
+          }
+        }
+      }
+
+      .form__glider {
+        box-sizing: border-box;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        z-index: 1;
+        transition: 0.25s ease-out;
+      }
+
+      .form__glider--style {
+        background-color: $colorPattensBlue;
+        border-radius: 15px;
+      }
+
+      input[id="radio-1"] {
+        &:checked {
+          & ~ .form__glider {
+            transform: translateX(-50%);
+          }
+        }
+      }
+
+      input[id="radio-2"] {
+        &:checked {
+          & ~ .form__glider {
+            transform: translateX(50%);
+          }
+        }
+      }
+    }
+
+    .form__tabs--style {
+      border: 1px solid $colorGreyDisable;
+      border-radius: 15px;
+    }
+  }
+
+  .form__button-container {
+    @include widthBoxSizing();
+    @include displayFlex(column, $none, center, center);
+
+    .form__submit-button {
+      @include widthBoxSizing();
+      margin-bottom: 16px;
+      padding: 16px;
+    }
+
+    .form__submit-button--style {
+      @include defaultStyle(white, $colorBlue, $fw-500, $fs-18, $lh-120);
+      border: none;
+      border-radius: 15px;
+    }
+
+    .form__privacy-policy-text {
+      margin: 0;
+
+      .form__privacy-policy-active-text--style {
+        text-decoration: none;
+        color: $colorBlue;
+      }
+    }
+
+    .form__privacy-policy-text--style {
+      @include defaultStyle(black, $none, $fw-400, $fs-14, $lh-120);
+    }
+  }
+}

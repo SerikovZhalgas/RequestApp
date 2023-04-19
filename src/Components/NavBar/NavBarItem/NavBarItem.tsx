@@ -9,7 +9,6 @@ type NavBarItemType = {
 
 export const NavBarItem = ({title, path}: NavBarItemType) => {
     const navLinkStyles = ({isActive}: any) => {
-        console.log(isActive);
         return 'navbar-item ' + `${isActive ? 'navbar-item__active--style' : 'navbar-item--style'}`;
     };
 
