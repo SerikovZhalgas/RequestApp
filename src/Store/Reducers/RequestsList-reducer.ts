@@ -4,11 +4,11 @@ const ACTION_TYPES = {
 
 const initialState = {
     requests: [
-        {id: 1, name: 'Константин', phoneNumber: '+7 747 133 72 81', email: 'abzhanow@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 0,1)).toDateString())},
-        {id: 2, name: 'Нариман', phoneNumber: '+7 747 133 72 81', email: 'abzhanovnariman1998@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 1,1)).toDateString())},
-        {id: 3, name: 'Юлия', phoneNumber: '+7 747 133 72 81', email: 'abzhanow@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 2,1)).toDateString())},
-        {id: 4, name: 'Нурсултан', phoneNumber: '+7 747 133 72 81', email: 'abzhanovnariman1998@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 3,1)).toDateString())},
-        {id: 5, name: 'Константин', phoneNumber: '+7 747 133 72 81', email: 'abzhanow@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 3,10)).toDateString())},
+        {id: 1, name: 'Константин', phoneNumber: '+77471337281', email: 'abzhanow@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 0,1)).toDateString())},
+        {id: 2, name: 'Нариман', phoneNumber: '+77471337281', email: 'abzhanovnariman1998@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 1,1)).toDateString())},
+        {id: 3, name: 'Юлия', phoneNumber: '+77471337281', email: 'abzhanow@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 2,1)).toDateString())},
+        {id: 4, name: 'Нурсултан', phoneNumber: '+77471337281', email: 'abzhanovnariman1998@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 3,1)).toDateString())},
+        {id: 5, name: 'Константин', phoneNumber: '+77471337281', email: 'abzhanow@gmail.com', createdDate: Date.parse(new Date(Date.UTC(2023, 3,10)).toDateString())},
     ] as requestsType[]
 };
 
